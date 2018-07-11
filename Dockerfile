@@ -1,16 +1,17 @@
 FROM fedora:28
 MAINTAINER Raphael Lehmann <raphael+docker@rleh.de>
 LABEL Description="Image for building Latex with pandoc"
-WORKDIR /work
 
-ADD . /work
+# Run updates
+RUN dnf update -yq && \
+    dnf clean all
 
-RUN dnf update  -y && \
-    dnf clean && \
-    dnf install -y \
+# Install required packages
+RUN dnf install -yq \
       pandoc \
       texlive-scheme-basic \
       ghostscript \
       make \
       perl-Image-ExifTool \
-      findutils
+      findutils && \
+    dnf clean all
