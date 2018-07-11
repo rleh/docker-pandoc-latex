@@ -13,5 +13,6 @@ RUN dnf install -yq \
       ghostscript \
       make \
       perl-Image-ExifTool \
-      findutils && \
+      findutils \
+      poppler-utils && \
     dnf clean all
