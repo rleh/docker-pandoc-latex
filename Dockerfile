@@ -9,7 +9,7 @@ RUN dnf update -yq && \
 # Install required packages
 RUN dnf install -yq \
       pandoc \
-      texlive-scheme-basic \
+      texlive-scheme-full \
       ghostscript \
       make \
       perl-Image-ExifTool \
