@@ -14,5 +14,6 @@ RUN dnf install -yq \
       make \
       perl-Image-ExifTool \
       findutils \
-      poppler && \
+      poppler \
+      poppler-utils && \
     dnf clean all
