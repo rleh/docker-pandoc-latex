@@ -1,4 +1,4 @@
-FROM fedora:28
+FROM fedora:33
 MAINTAINER Raphael Lehmann <raphael+docker@rleh.de>
 LABEL Description="Image for building Latex with pandoc"
 
